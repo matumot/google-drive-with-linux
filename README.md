@@ -8,12 +8,12 @@ sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
 sudo apt-get install google-drive-ocamlfuse
 ```
-*  gdfuseの設定ファイルを編集する。
+*  gdfuseの設定ファイルを編集する。(注: .gdfuse ディレクトリは一旦認証処理 (google-drive-ocamlfuseを利用)を実施すると作成される)
 ```
 cd ~/.gdfuse
 rsync -avz default/  [your_label]
 ```
-この後、~/.gdfuse/[your_label]/config の中で root_folder と team_drive_id の値を編集する。
+この後、~/.gdfuse/[your_label]/config の中で root_folder と team_drive_id の値を編集する。(team_drive_idは共有ドライブのトップディレクトリのfolder ID, root_folderはマウント対象のfolder IDを指す)
 ```
 ...
 root_folder=[TEAM_DRIVE_ROOT_FOLDER_ID]
